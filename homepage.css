@@ -1,0 +1,219 @@
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background: #999;
+  color: #999;
+  background-image: url('assets/fundo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: center;
+    line-height: 1.6;
+    background-color: #222; 
+    color: #999;
+}
+
+
+header {
+  background: black;
+  padding: 15px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.navbar a {
+  color: #999;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: rgb(2, 47, 61);
+}
+
+
+
+.section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 60px auto; 
+  color: rgb(168, 123, 0);
+  padding: 40px 20px;
+  text-align: center;
+  background: rgb(0, 17, 20);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgb(45, 124, 138);
+}
+
+.section h2 {
+  margin-bottom: 30px;
+  color: #999;
+  border-bottom: 3px solid rgb(168, 123, 0);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+
+#hero {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#hero img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid black;
+  margin-bottom: 15px;
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: #999;
+}
+
+
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.hobby-card {
+  background: rgb(0, 30, 36);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.hobby-card:hover {
+  transform: translateY(-5px);
+}
+
+.hobby-card h3 {
+  margin-bottom: 10px;
+  color: rgb(168, 123, 0);
+}
+
+.hobby-card p {
+  margin-bottom: 15px;
+  color: rgb(168, 123, 0);
+}
+
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.slideshow a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation-name: slideshow-animation;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+}
+
+.slideshow a:nth-child(1) img {
+  animation-delay: 0s;
+}
+.slideshow a:nth-child(2) img {
+  animation-delay: 5s; 
+}
+.slideshow a:nth-child(3) img {
+  animation-delay: 10s; 
+}
+.slideshow a:nth-child(4) img {
+  animation-delay: 15s; 
+}
+.slideshow a:nth-child(5) img {
+  animation-delay: 20s; 
+}
+
+@keyframes slideshow-animation {
+  0% { opacity: 0; }
+  15% { opacity: 1; }  
+  85% { opacity: 1; }  
+  100% { opacity: 0; }
+}
+.musicas {
+  color: rgb(168, 123, 0);
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.letterboxd  {
+    color: rgb(4, 0, 59); /* Um tom de azul para destacar o link */
+    font-weight: bold;
+    text-decoration: none; /* Remove o sublinhado padrão */
+    transition: color 0.3s ease; /* Adiciona uma transição suave de cor */
+}
+
+.letterboxd:hover {
+    color: rgb(255, 0, 0); /* Uma cor mais escura ao passar o mouse */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+.skills-container, .skills-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.skill-bar, .progress-bar {
+  background: #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.skill-level, .progress {
+  background: rgb(168, 123, 0);
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-size: 0.9rem;
+}
+
+
+.contact-link {
+    color: rgb(168, 123, 0); /* Exemplo: um azul. Você pode escolher a cor que quiser. */
+    background-color: transparent;
+    border: 1px solid rgb(168, 123, 0);
+    border-radius: 5px;
+    padding: 8px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-link:hover {
+    background-color: rgb(168, 123, 0); /* A cor de fundo muda ao passar o mouse */
+    color: rgb(255, 0, 0); /* A cor do texto muda para branco */
+}
